@@ -18,6 +18,7 @@ public class StatsService {
         }
         return averageSum;
     }
+
     public int maxSales(int[] sales) {
         int maxMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
@@ -29,6 +30,7 @@ public class StatsService {
 
         return maxMonth + 1; // месяца нумеруются с 1, а индексы массива с 0, нужно сдвинуть ответ на 1
     }
+
     public int minSales(int[] sales) {
         int minMonth = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
@@ -40,28 +42,31 @@ public class StatsService {
 
         return minMonth + 1; // месяца нумеруются с 1, а индексы массива с 0, нужно сдвинуть ответ на 1
     }
-    public int quantityMonsMinSales(int[] sales) {
-       int month = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
-       for (int i = 0; i < sales.length; i++) {
+    public int quantityMonsMinSales(int[] sales) {
+        int month = 0; // номер месяца с минимальными продажами среди просмотренных ранее
+
+        for (int i = 0; i < sales.length; i++) {
             if (sales[i] < averageAmount(sales)) { // значит, в рассматриваемом i-м месяце продаж меньше
-               month= month+1;
-               // запомним его как минимальный
+                month = month + 1;
+                // запомним его как минимальный
             }
         }
 
-        return month ; // месяца нумеруются с 1, а индексы массива с 0, нужно сдвинуть ответ на 1
+        return month; // месяца нумеруются с 1, а индексы массива с 0, нужно сдвинуть ответ на 1
     }
+
     public int quantityMonsMaxSales(int[] sales) {
         int month = 0; // номер месяца с минимальными продажами среди просмотренных ранее
 
         for (int i = 0; i < sales.length; i++) {
             if (sales[i] > averageAmount(sales)) { // значит, в рассматриваемом i-м месяце продаж меньше
-                month= month+1;
+                month = month + 1;
                 // запомним его как минимальный
             }
         }
 
-        return month ;
+        return month;
 
-}}
+    }
+}

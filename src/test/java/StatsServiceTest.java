@@ -48,17 +48,19 @@ public class StatsServiceTest {
 
 
     }
+
     @Test
-    public void shouldFindQuantityMonsMinSales(){
+    public void shouldFindQuantityMonsMinSales() {
         StatsService service = new StatsService();
         int[] sales = {
                 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         int expectedQuantityMonsMinSales = 5;
         int actualQuantityMonsMinSales = service.quantityMonsMinSales(sales);
-        Assertions.assertEquals(expectedQuantityMonsMinSales,actualQuantityMonsMinSales);
+        Assertions.assertEquals(expectedQuantityMonsMinSales, actualQuantityMonsMinSales);
 
 
     }
+
     @Test
     public void shouldFindQuantityMonsMaxSales() {
         StatsService service = new StatsService();
@@ -69,4 +71,4 @@ public class StatsServiceTest {
         Assertions.assertEquals(expectedQuantityMonsMaxSales, actualQuantityMonsMaxSales);
     }
 
-    }
+}
